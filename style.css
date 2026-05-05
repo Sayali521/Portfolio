@@ -1,3 +1,56 @@
+/* Mobile Devices (768px peksha lahan screens sathi) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem; /* Screen chya bajula thodi jag sodli */
+    }
+
+    /* 1. Navbar Mobile sathi adjust kela */
+    .nav-links {
+        display: none; /* Mobile var menu links hide kelya (garaj aslyas Hamburger menu vapra) */
+    }
+
+    /* 2. Hero Section (Naav ani Bio) */
+    h1 {
+        font-size: 2rem; /* Navacha size lahan kela */
+        line-height: 1.2;
+    }
+
+    .bio {
+        font-size: 1rem; /* Bio cha size lahan kela */
+    }
+
+    /* 3. Education ani Skills Section */
+    .edu-card {
+        flex-direction: column; /* Year ani details ekameka khali yetil */
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .edu-year {
+        min-width: unset;
+        font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Boxes chote kele */
+    }
+
+    /* 4. Project Section */
+    .project-grid {
+        grid-template-columns: 1fr; /* Pratek card purna width gheil */
+    }
+
+    /* 5. Contact Buttons */
+    .contact-options {
+        flex-direction: column; /* WhatsApp ani Call buttons ekameka khali yetil */
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%; /* Buttons chi width purna kreli */
+        justify-content: center;
+    }
+}
 :root {
     --bg: #050505;
     --text-main: #ffffff;
