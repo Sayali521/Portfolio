@@ -227,7 +227,32 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
 
     /* Navbar Mobile */
     .navbar .container { flex-direction: column; gap: 10px; }
-    .nav-links { display: none; /* Mobile var PC menu hide kela */ }
+    /* Mobile Navbar Menu Fix */
+    .nav-links { 
+        display: flex; 
+        flex-wrap: wrap; /* Jag nsel tr khalchya line vr yeil */
+        justify-content: center; 
+        gap: 10px; 
+        margin-top: 15px; 
+        padding-bottom: 10px;
+    }
+    
+    .nav-links li { 
+        margin-left: 0; /* PC cha margin kadhla */
+    }
+    
+    .nav-links a { 
+        font-size: 0.85rem; 
+        padding: 5px 12px; 
+        background: rgba(255, 255, 255, 0.1); /* Halaka transparent background */
+        border-radius: 20px; /* Gol aakar */
+        border: 1px solid var(--border);
+    }
+    
+    .nav-links a:hover {
+        background: var(--accent);
+        color: white;
+    }
     .stylish-name-small { font-size: 20px; text-align: center; }
 
     /* Hero Mobile */
