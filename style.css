@@ -11,7 +11,7 @@
 html, body {
     scroll-behavior: smooth;
     max-width: 100%;
-    overflow-x: hidden; /* Screen chya baher content janar nahi */
+    overflow-x: hidden; 
 }
 
 * {
@@ -220,32 +220,32 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
 
 
 /* =========================================================
-   📱 MOBILE RESPONSIVE MEDIA QUERIES (Sglyat Mhatvache)
+   📱 MOBILE RESPONSIVE MEDIA QUERIES
    ========================================================= */
 @media screen and (max-width: 768px) {
     .container { padding: 0 1.5rem; width: 100%; }
 
-    /* Navbar Mobile */
+    /* Navbar Mobile Fixes */
     .navbar .container { flex-direction: column; gap: 10px; }
-    /* Mobile Navbar Menu Fix */
+    
     .nav-links { 
         display: flex; 
-        flex-wrap: wrap; /* Jag nsel tr khalchya line vr yeil */
+        flex-wrap: wrap; 
         justify-content: center; 
         gap: 10px; 
-        margin-top: 15px; 
-        padding-bottom: 10px;
+        margin-top: 10px; 
+        padding-bottom: 5px;
     }
     
     .nav-links li { 
-        margin-left: 0; /* PC cha margin kadhla */
+        margin-left: 0; 
     }
     
     .nav-links a { 
         font-size: 0.85rem; 
-        padding: 5px 12px; 
-        background: rgba(255, 255, 255, 0.1); /* Halaka transparent background */
-        border-radius: 20px; /* Gol aakar */
+        padding: 6px 14px; 
+        background: rgba(255, 255, 255, 0.05); 
+        border-radius: 20px; 
         border: 1px solid var(--border);
     }
     
@@ -253,6 +253,7 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
         background: var(--accent);
         color: white;
     }
+    
     .stylish-name-small { font-size: 20px; text-align: center; }
 
     /* Hero Mobile */
@@ -268,7 +269,7 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
 
     /* Education Mobile */
     .edu-card { flex-direction: column; gap: 10px; padding: 20px; text-align: center; }
-    .edu-card:hover { transform: translateY(-5px); } /* X chya jagi Y vaparla mhanje varti hoil, bajula nahi */
+    .edu-card:hover { transform: translateY(-5px); } 
     .edu-year { min-width: auto; font-size: 1rem; }
 
     /* Skills Mobile */
