@@ -1,84 +1,87 @@
-/* Mobile Responsive Fix */
-@media screen and (max-width: 600px) {
-    /* 1. Container padding kami kela */
+/* Screen baher janara content thambvnyasathi */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
     .container {
-        padding: 0 15px;
+        padding: 0 20px !important; /* Side gaps fix kelya */
         width: 100%;
-        overflow-x: hidden; /* Screen baher content janar nahi */
     }
 
-    /* 2. Hero Section Adjustments */
+    /* 1. Header & Logo Fix */
+    .navbar {
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* 2. Hero Section (Text overlapping fix) */
     .hero {
-        padding: 60px 0;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 28px !important; /* Naav screen madhe fit hoil */
-        word-wrap: break-word;
-    }
-
-    .bio {
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    /* 3. Education Section Fix */
-    .edu-card {
-        flex-direction: column;
-        gap: 10px;
-        padding: 20px;
+        padding: 50px 0 !important;
         text-align: left;
     }
 
+    h1 {
+        font-size: 2.2rem !important; /* Motha text mobile var lahan kela */
+        line-height: 1.2 !important;
+        margin-bottom: 15px;
+    }
+
+    .bio {
+        font-size: 1rem !important;
+        line-height: 1.5;
+        width: 100% !important;
+    }
+
+    /* 3. Education Section (Video madhe overlap hot aslyamule) */
+    .edu-card {
+        flex-direction: column !important;
+        padding: 20px !important;
+        gap: 5px !important;
+    }
+
     .edu-year {
-        font-size: 14px;
+        font-size: 0.9rem;
+        color: var(--accent);
         margin-bottom: 5px;
     }
 
-    /* 4. Skills Section (Don columns madhe) */
+    /* 4. Technical Skills (Grid columns fix) */
     .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Mobile var don boxes distil */
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns madhe skills distil */
+        gap: 12px !important;
     }
 
     .skill-card {
-        padding: 15px 5px;
-        font-size: 14px;
+        padding: 12px !important;
+        font-size: 0.85rem !important;
     }
 
-    /* 5. Projects Section (Ek column) */
+    /* 5. Featured Work (Cards) */
     .project-grid {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr !important; /* Ekach card disel purna width madhe */
         gap: 20px;
     }
 
     .project-card {
-        width: 100%;
+        padding: 20px !important;
     }
 
-    /* 6. Contact Buttons Fix */
-    .contact-options {
-        flex-direction: column;
-        width: 100%;
+    /* 6. Buttons Fix */
+    .hero-btns {
+        display: flex;
+        flex-direction: column; /* Buttons ekakhali ek yetil */
         gap: 10px;
     }
 
-    .contact-card {
-        width: 100% !important; /* Button purna width gheil */
-        justify-content: center;
-        padding: 12px;
-    }
-
-    /* 7. Navbar (Mobile var simple look) */
-    .nav-links {
-        display: none; /* Mobile menu nantar add karu shakta */
-    }
-    
-    .navbar .container {
-        justify-content: center;
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
 }
 :root {
