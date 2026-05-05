@@ -1,53 +1,83 @@
-/* Mobile Devices (768px peksha lahan screens sathi) */
-@media (max-width: 768px) {
+/* Mobile Responsive Fix */
+@media screen and (max-width: 600px) {
+    /* 1. Container padding kami kela */
     .container {
-        padding: 0 1.5rem; /* Screen chya bajula thodi jag sodli */
+        padding: 0 15px;
+        width: 100%;
+        overflow-x: hidden; /* Screen baher content janar nahi */
     }
 
-    /* 1. Navbar Mobile sathi adjust kela */
-    .nav-links {
-        display: none; /* Mobile var menu links hide kelya (garaj aslyas Hamburger menu vapra) */
+    /* 2. Hero Section Adjustments */
+    .hero {
+        padding: 60px 0;
+        text-align: center;
     }
 
-    /* 2. Hero Section (Naav ani Bio) */
     h1 {
-        font-size: 2rem; /* Navacha size lahan kela */
-        line-height: 1.2;
+        font-size: 28px !important; /* Naav screen madhe fit hoil */
+        word-wrap: break-word;
     }
 
     .bio {
-        font-size: 1rem; /* Bio cha size lahan kela */
+        font-size: 16px;
+        padding: 0 10px;
     }
 
-    /* 3. Education ani Skills Section */
+    /* 3. Education Section Fix */
     .edu-card {
-        flex-direction: column; /* Year ani details ekameka khali yetil */
+        flex-direction: column;
         gap: 10px;
-        padding: 15px;
+        padding: 20px;
+        text-align: left;
     }
 
     .edu-year {
-        min-width: unset;
-        font-size: 0.9rem;
+        font-size: 14px;
+        margin-bottom: 5px;
     }
 
+    /* 4. Skills Section (Don columns madhe) */
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Boxes chote kele */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Mobile var don boxes distil */
+        gap: 10px;
     }
 
-    /* 4. Project Section */
+    .skill-card {
+        padding: 15px 5px;
+        font-size: 14px;
+    }
+
+    /* 5. Projects Section (Ek column) */
     .project-grid {
-        grid-template-columns: 1fr; /* Pratek card purna width gheil */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    /* 5. Contact Buttons */
+    .project-card {
+        width: 100%;
+    }
+
+    /* 6. Contact Buttons Fix */
     .contact-options {
-        flex-direction: column; /* WhatsApp ani Call buttons ekameka khali yetil */
-        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
     }
 
     .contact-card {
-        width: 100%; /* Buttons chi width purna kreli */
+        width: 100% !important; /* Button purna width gheil */
+        justify-content: center;
+        padding: 12px;
+    }
+
+    /* 7. Navbar (Mobile var simple look) */
+    .nav-links {
+        display: none; /* Mobile menu nantar add karu shakta */
+    }
+    
+    .navbar .container {
         justify-content: center;
     }
 }
