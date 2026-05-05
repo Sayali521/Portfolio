@@ -2,68 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayali's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-    <div class="container">
-        <img src="https://github.com/Sayali521/Portfolio/blob/main/s-logo.png" height="50" >
-        <h1 class="stylish-name-small">Sayali Sunil Varade</h1>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="btn-primary">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- About Section -->
-<section id="about" class="hero container">
-    <div class="hero-content">
-        <h1>Building digital products with <span class="highlight">modern tech.</span></h1>
-        <p class="bio">Expert Full-Stack Developer creating scalable solutions.</p>
-    </div>
-</section>
-<section id="education" class="container section">
-    <h2 class="section-title">Education</h2>
-    <div class="education-container">
-        <!-- Degree Details -->
-        <div class="edu-card">
-            <div class="edu-year">2023 - 2026</div>
-            <div class="edu-info">
-                <h3>Bachelor of Science Computer (BSC)</h3>
-                <p class="institute">Smt. G. G. Khadse College, Muktainagar</p>
-                <p class="edu-desc">Final year student focusing on Full-Stack Development and Cybersecurity concepts.</p><br><br>
-            </div>
+        <div class="container">
+            <img src="C:\Users\Dell\Documents\vscode\My-Portfolio\s-logo.png" height="50" alt="Sayali Logo">
+            <h1 class="stylish-name-small">Sayali Sunil Varade</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- HSC/SSC Details (Optional) -->
-        <div class="edu-card">
-            <div class="edu-year">2021 - 2023</div>
-            <div class="edu-info">
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p class="institute">Mahatma Gandhi vidyalaya, Varangav</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="container section">
-    <h2 class="section-title">Technical Skills</h2>
-    <div>
-        <div class="skill-card">Frontend: React, JS, HTML/CSS</div>
-            <div class="skill-card">Backend: Node.js, PHP, Python</div>
-            <div class="skill-card">Database: MySQL, MongoDB</div>
-            <div class="skill-card">Tools: Git, Docker, AWS</div>
-    </div>
-</section>
-
-    <header class="hero container">
+    <!-- About Section -->
+    <header id="about" class="hero container section">
         <div class="hero-content">
             <p class="tagline">Available for opportunities</p>
             <h1>Building digital products with <span class="highlight">modern tech.</span></h1>
@@ -75,6 +35,43 @@
         </div>
     </header>
 
+    <!-- Education Section -->
+    <section id="education" class="container section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-container">
+            <!-- Degree Details -->
+            <div class="edu-card">
+                <div class="edu-year">2023 - 2026</div>
+                <div class="edu-info">
+                    <h3>Bachelor of Science Computer (BSC)</h3>
+                    <p class="institute">Smt. G. G. Khadse College, Muktainagar</p>
+                    <p class="edu-desc">Final year student focusing on Full-Stack Development and Cybersecurity concepts.</p>
+                </div>
+            </div>
+
+            <!-- HSC/SSC Details -->
+            <div class="edu-card">
+                <div class="edu-year">2021 - 2023</div>
+                <div class="edu-info">
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p class="institute">Mahatma Gandhi Vidyalaya, Varangaon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid"> <!-- Hya div la class dila ahe -->
+            <div class="skill-card">Frontend: React, JS, HTML/CSS</div>
+            <div class="skill-card">Backend: Node.js, PHP, Python</div>
+            <div class="skill-card">Database: MySQL, MongoDB</div>
+            <div class="skill-card">Tools: Git, Docker, AWS</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="container section">
         <h2 class="section-title">Featured Work</h2>
         <div class="project-grid">
@@ -97,35 +94,27 @@
         </div>
     </section>
 
-    <footer id="contact" class="container">
+    <!-- Contact Section -->
+    <footer id="contact" class="container section">
+        <h2 class="section-title">Let's Connect</h2>
         <div class="footer-content">
-            <h2>Let's build something together.</h2>
-            <p>Currently looking for a full-time role or freelance collaborations.</p>
-            <a href="https://mail.google.com/mail/u/0/#search/varadesayali4%40gmail.com?compose=new" class="email-link">varadesayali4@gmail.com</a>
+            <p style="color: var(--text-dim); margin-bottom: 20px;">Currently looking for a full-time role or freelance collaborations.</p>
+            <a href="mailto:varadesayali4@gmail.com" class="email-link">varadesayali4@gmail.com</a>
         </div>
         
-  <section id="contact" class="container section">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-options">
-        
-        <!-- WhatsApp: Direct Link (Tumcha number '91' sobat taka) -->
-        <a href="https://wa.me/+918830759434?text=Hello%20.." target="_blank" class="contact-card">
-            <span class="icon">💬</span>
-            <h3>WhatsApp</h3>
-        </a>
+        <div class="contact-options">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/918830759434?text=Hello%20.." target="_blank" class="contact-card">
+                <span class="icon">💬</span>
+                <h3>WhatsApp</h3>
+            </a>
 
-        <!-- Call: Direct Dial -->
-        <a href="tel:918830759434" class="contact-card">
-            <span class="icon">📞</span>
-            <h3>Call</h3>
-        </a>
-
-    </div>
-</section>
-        
-
-    </div>
-</section>
+            <!-- Call -->
+            <a href="tel:+918830759434" class="contact-card">
+                <span class="icon">📞</span>
+                <h3>Call</h3>
+            </a>
+        </div>
     </footer>
 </body>
 </html>
