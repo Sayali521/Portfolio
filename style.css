@@ -1,264 +1,17 @@
-/* Screen baher janara content thambvnyasathi */
+:root {
+    --bg: #050505;
+    --text-main: #ffffff;
+    --text-dim: #a1a1aa;
+    --accent: #3b82f6;
+    --card-bg: #111111;
+    --border: #27272a;
+}
+
+/* Base & Smooth Scrolling */
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 0 20px !important; /* Side gaps fix kelya */
-        width: 100%;
-    }
-
-    /* 1. Header & Logo Fix */
-    .navbar {
-        height: auto;
-        padding: 15px 0;
-    }
-    
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    /* 2. Hero Section (Text overlapping fix) */
-    .hero {
-        padding: 50px 0 !important;
-        text-align: left;
-    }
-
-    h1 {
-        font-size: 2.2rem !important; /* Motha text mobile var lahan kela */
-        line-height: 1.2 !important;
-        margin-bottom: 15px;
-    }
-
-    .bio {
-        font-size: 1rem !important;
-        line-height: 1.5;
-        width: 100% !important;
-    }
-
-    /* 3. Education Section (Video madhe overlap hot aslyamule) */
-    .edu-card {
-        flex-direction: column !important;
-        padding: 20px !important;
-        gap: 5px !important;
-    }
-
-    .edu-year {
-        font-size: 0.9rem;
-        color: var(--accent);
-        margin-bottom: 5px;
-    }
-
-    /* 4. Technical Skills (Grid columns fix) */
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns madhe skills distil */
-        gap: 12px !important;
-    }
-
-    .skill-card {
-        padding: 12px !important;
-        font-size: 0.85rem !important;
-    }
-
-    /* 5. Featured Work (Cards) */
-    .project-grid {
-        grid-template-columns: 1fr !important; /* Ekach card disel purna width madhe */
-        gap: 20px;
-    }
-
-    .project-card {
-        padding: 20px !important;
-    }
-
-    /* 6. Buttons Fix */
-    .hero-btns {
-        display: flex;
-        flex-direction: column; /* Buttons ekakhali ek yetil */
-        gap: 10px;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-}
-:root {
-    --bg: #050505;
-    --text-main: #ffffff;
-    --text-dim: #a1a1aa;
-    --accent: #3b82f6;
-    --card-bg: #111111;
-    --border: #27272a;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--bg);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.navbar {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-links li { margin-left: 2rem; }
-.nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.9rem; }
-.nav-links a:hover { color: var(--accent); }
-
-.hero { padding: 120px 0; }
-.tagline { color: var(--accent); font-weight: 600; margin-bottom: 1rem; }
-h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
-.highlight { color: var(--accent); }
-.bio { color: var(--text-dim); font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; }
-
-.stylish-name-small {
-    font-size: 26px; /* Hight 14/15 khup lahan hoil, he size professional ahe */
-    font-weight: 700;
-    color: var(--text-main);
-    position: relative;
-    display: inline-block;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    cursor: default;
-}
-
-/* Navachya khali ek stylish line */
-.stylish-name-small::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--accent);
-    transition: width 0.4s ease;
-}
-
-/* Mouse navavar nelyavar line mothi hoil */
-.stylish-name-small:hover::after {
-    width: 100%;
-}
-
-/* Navala thoda glow denyasathi */
-.stylish-name-small:hover {
-    color: var(--accent);
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-    transition: 0.3s ease;
-}
-
-.btn-primary {
-    background: var(--accent);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn-secondary {
-    color: var(--text-main);
-    margin-left: 1rem;
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent);
-}
-
-.section { padding: 80px 0; }
-.section-title { margin-bottom: 3rem; font-size: 2rem; }
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.skill-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.3s ease;
-}
-
-.project-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.project-info { padding: 2rem; }
-.tech-stack { margin: 1rem 0; }
-.tech-stack span {
-    background: #1e293b;
-    color: var(--accent);
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
-}
-
-.email-link {
-    font-size: 2rem;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    .project-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-}
-:root {
-    --bg: #050505;
-    --text-main: #ffffff;
-    --text-dim: #a1a1aa;
-    --accent: #3b82f6;
-    --card-bg: #111111;
-    --border: #27272a;
-}
-
-/* 1. Smooth Scrolling Fix */
-html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden; /* Screen chya baher content janar nahi */
 }
 
 * {
@@ -280,23 +33,26 @@ body {
     padding: 0 2rem;
 }
 
-/* 2. Sticky Navbar Fix */
+/* Navbar */
 .navbar {
-    height: 80px;
+    min-height: 80px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border);
-    position: sticky; /* Menu varti stick rahil */
+    position: sticky;
     top: 0;
-    background-color: rgba(5, 5, 5, 0.8); /* Thoda transparent look */
-    backdrop-filter: blur(10px); /* Glass effect */
+    background-color: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .nav-links {
@@ -309,12 +65,50 @@ body {
 .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.9rem; transition: 0.3s; }
 .nav-links a:hover { color: var(--accent); }
 
-.hero { padding: 100px 0; }
+/* Stylish Name */
+.stylish-name-small {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+.stylish-name-small::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.4s ease;
+}
+
+.stylish-name-small:hover::after { width: 100%; }
+.stylish-name-small:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* General Section Styles */
+.section { 
+    padding: 100px 0; 
+    scroll-margin-top: 80px;
+}
+.section-title { margin-bottom: 3rem; font-size: 2rem; }
+
+/* Hero Section */
+.hero { padding: 120px 0 80px 0; }
+.hero-content { max-width: 800px; }
 .tagline { color: var(--accent); font-weight: 600; margin-bottom: 1rem; }
 h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
 .highlight { color: var(--accent); }
 .bio { color: var(--text-dim); font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; }
 
+.cta-group { display: flex; gap: 1rem; align-items: center; margin-top: 20px;}
 .btn-primary {
     background: var(--accent);
     color: white;
@@ -323,20 +117,40 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
     text-decoration: none;
     font-weight: 600;
 }
-
-.section { 
-    padding: 100px 0; 
-    scroll-margin-top: 80px; /* Navbar chya khali content overlap honar nahi */
+.btn-secondary {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
 }
 
-.section-title { margin-bottom: 3rem; font-size: 2rem; }
+/* Education Section */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.edu-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 40px;
+    transition: 0.3s ease;
+}
+.edu-card:hover { border-color: var(--accent); transform: translateX(10px); }
+.edu-year { color: var(--accent); font-weight: 700; font-size: 1.1rem; min-width: 120px; }
+.edu-info h3 { font-size: 1.3rem; margin-bottom: 5px; color: var(--text-main); }
+.institute { color: var(--text-dim); font-weight: 600; margin-bottom: 10px; }
+.edu-desc { color: var(--text-dim); font-size: 0.95rem; }
 
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
-
 .skill-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -345,12 +159,12 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
     text-align: center;
 }
 
+/* Project Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
 }
-
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -358,52 +172,90 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
     overflow: hidden;
     transition: 0.3s ease;
 }
-
 .project-card:hover { border-color: var(--accent); transform: translateY(-5px); }
 .project-info { padding: 2rem; }
+.tech-stack { margin: 1rem 0; }
+.tech-stack span {
+    background: #1e293b;
+    color: var(--accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.project-link { color: var(--accent); text-decoration: none; font-weight: bold;}
 
+/* Contact & Footer Section */
 .email-link {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--accent);
     text-decoration: none;
     font-weight: 700;
+    word-break: break-all;
 }
 .contact-options {
-    display: flex; /* Grid chya jagi flex vapra */
-    justify-content: left; /* Buttons madhe annyasathi */
-    gap: 15px; /* Don buttons madhil antar */
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
     margin-top: 2rem;
 }
-
 .contact-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    padding: 10px 20px; /* Padding kami kelyane box lahan hoil */
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     color: var(--text-main);
     display: flex;
     align-items: center;
-    gap: 10px; /* Icon ani text madhil antar */
-    width: fit-content; /* Box content nusar lahan hoil */
+    gap: 10px;
+    width: fit-content;
     transition: 0.3s ease;
 }
+.contact-card:hover { border-color: var(--accent); background: #1a1a1a; }
+.contact-card .icon { font-size: 1.2rem; }
+.contact-card h3 { color: var(--accent); font-size: 1rem; margin: 0; }
 
-.contact-card:hover {
-    border-color: var(--accent);
-    background: #1a1a1a;
-}
 
-.contact-card .icon {
-    font-size: 1.2rem; /* Icon cha size lahan kela */
-}
+/* =========================================================
+   📱 MOBILE RESPONSIVE MEDIA QUERIES (Sglyat Mhatvache)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+    .container { padding: 0 1.5rem; width: 100%; }
 
-.contact-card h3 {
-    color: var(--accent);
-    font-size: 1rem; /* Text size professional ani lahan kela */
-    margin: 0;
-}
+    /* Navbar Mobile */
+    .navbar .container { flex-direction: column; gap: 10px; }
+    .nav-links { display: none; /* Mobile var PC menu hide kela */ }
+    .stylish-name-small { font-size: 20px; text-align: center; }
 
-.contact-card p {
-    display: none; /* Extra description kadhun takli mhanje box lahan hoil */
+    /* Hero Mobile */
+    .hero { padding: 60px 0; text-align: center; }
+    h1 { font-size: 2.2rem; line-height: 1.2; }
+    .bio { font-size: 1rem; margin: 0 auto 2rem auto; }
+    .cta-group { flex-direction: column; gap: 15px; justify-content: center; }
+    .btn-primary { width: 100%; text-align: center; }
+
+    /* Sections Mobile */
+    .section { padding: 60px 0; }
+    .section-title { font-size: 1.8rem; text-align: center; }
+
+    /* Education Mobile */
+    .edu-card { flex-direction: column; gap: 10px; padding: 20px; text-align: center; }
+    .edu-card:hover { transform: translateY(-5px); } /* X chya jagi Y vaparla mhanje varti hoil, bajula nahi */
+    .edu-year { min-width: auto; font-size: 1rem; }
+
+    /* Skills Mobile */
+    .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .skill-card { padding: 15px 10px; font-size: 0.85rem; }
+
+    /* Projects Mobile */
+    .project-grid { grid-template-columns: 1fr; }
+
+    /* Contact Mobile */
+    footer .footer-content { text-align: center; }
+    .email-link { font-size: 1.2rem; }
+    .contact-options { flex-direction: column; width: 100%; align-items: center; }
+    .contact-card { width: 100%; justify-content: center; padding: 15px; }
 }
