@@ -225,16 +225,20 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
 
 
 /* =========================================================
-   📱 MOBILE RESPONSIVE MEDIA QUERIES
+  /* =========================================================
+   📱 MOBILE RESPONSIVE MEDIA QUERIES (UPDATED)
    ========================================================= */
 @media screen and (max-width: 768px) {
     .container { padding: 0 1.5rem; width: 100%; }
 
     /* Navbar Mobile Fixes */
+    .navbar { 
+        background-color: #050505 !important; /* Transparent background kadhla mhanje mage text disnar nahi */
+    }
     .navbar .container { flex-direction: column; gap: 10px; }
     
     .nav-links { 
-        display: flex !important;
+        display: flex; 
         flex-wrap: wrap; 
         justify-content: center; 
         gap: 10px; 
@@ -242,9 +246,7 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
         padding-bottom: 5px;
     }
     
-    .nav-links li { 
-        margin-left: 0; 
-    }
+    .nav-links li { margin-left: 0; }
     
     .nav-links a { 
         font-size: 0.85rem; 
@@ -261,15 +263,21 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
     
     .stylish-name-small { font-size: 20px; text-align: center; }
 
-    /* Hero Mobile */
-    .hero { padding: 60px 0; text-align: center; }
+    /* Hero Mobile (Varti jag sodli mhanje text menu chya mage janar nahi) */
+    .hero { 
+        padding: 180px 0 60px 0 !important; 
+        text-align: center; 
+    }
     h1 { font-size: 2.2rem; line-height: 1.2; }
     .bio { font-size: 1rem; margin: 0 auto 2rem auto; }
     .cta-group { flex-direction: column; gap: 15px; justify-content: center; }
     .btn-primary { width: 100%; text-align: center; }
 
-    /* Sections Mobile */
-    .section { padding: 60px 0; }
+    /* Sections Mobile (Click kelyavr menu chya khali barobar disel) */
+    .section { 
+        padding: 60px 0; 
+        scroll-margin-top: 220px !important; /* Menu evdhi jag sodli */
+    }
     .section-title { font-size: 1.8rem; text-align: center; }
 
     /* Education Mobile */
